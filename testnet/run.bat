@@ -1,0 +1,1 @@
+geth --networkid 20220521 --config config.toml --datadir node/01 --unlock 0xbf30b5020f1c8a00ee03ea8326d360c7b6883662 --password password.txt --mine console

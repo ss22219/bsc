@@ -83,7 +83,7 @@ func NewOracle(backend OracleBackend, params Config) *Oracle {
 		log.Warn("Sanitizing invalid gasprice oracle sample percentile", "provided", params.Percentile, "updated", percent)
 	}
 	maxPrice := params.MaxPrice
-	if maxPrice == nil || maxPrice.Int64() <= 0 {
+	if maxPrice == nil || maxPrice.Int64() < 0 {
 		maxPrice = DefaultMaxPrice
 		log.Warn("Sanitizing invalid gasprice oracle price cap", "provided", params.MaxPrice, "updated", maxPrice)
 	}

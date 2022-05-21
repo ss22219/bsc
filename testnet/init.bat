@@ -1,0 +1,1 @@
+geth --datadir node/01 init genesis.json
